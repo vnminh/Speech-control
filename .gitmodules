@@ -1,0 +1,3 @@
+[submodule "models/Zipformer-30M-RNNT-Streaming-6000h"]
+	path = models/Zipformer-30M-RNNT-Streaming-6000h
+	url = https://huggingface.co/hynt/Zipformer-30M-RNNT-Streaming-6000h
