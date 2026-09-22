@@ -24,7 +24,7 @@ asr/
 │       ├── decoder-epoch-31-avg-11-chunk-32-left-128.fp16.onnx
 │       └── joiner-epoch-31-avg-11-chunk-32-left-128.fp16.onnx
 ├── realtime_asr_streaming.py
-├── smart_home_real.py
+├── speech_control.py
 ├── requirements.txt
 ├── setup_pi.sh
 └── README.md
@@ -50,7 +50,7 @@ Python programs use chunk size 32 by default.
 
 Do not power the INMP441 from 5 V.
 
-### Smart-home GPIO
+### GPIO wire schema
 
 | Device | GPIO |
 |---|---:|
@@ -362,12 +362,12 @@ pre-roll          : 0.5 s
 
 ---
 
-## 11. Run the smart-home controller
+## 11. Run the speech controller
 
-First test the GPIO controller without speech recognition:
+First test the GPIO without speech recognition:
 
 ```bash
-python smart_home_real.py --keyboard
+python speech_control.py --keyboard
 ```
 
 Example commands:
@@ -384,13 +384,13 @@ tắt cả hai
 Then run voice control:
 
 ```bash
-python smart_home_real.py
+python speech_control.py
 ```
 
 You can reduce fan speed with:
 
 ```bash
-python smart_home_real.py --fan-speed 0.7
+python speech_control.py --fan-speed 0.7
 ```
 
 The light uses GPIO17. `bật đèn` sets GPIO17 HIGH and `tắt đèn` sets GPIO17 LOW.
